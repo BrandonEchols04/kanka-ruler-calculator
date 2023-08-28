@@ -1,0 +1,54 @@
+<main>
+
+    <h1 id="title">Kanka Ruler Calculation</h1>
+
+    <div id="containerOptions" class="container">
+      <br>
+      <div class="parent">
+        <div class="input-group">
+          <input type="number" (ngModel)="mapWidthPixels" id="mapWidthPixels" (change)="calculateDistanceMeasurment()">
+          <small>Width of Map (pixels)</small>
+        </div>
+
+        <div class="input-group">
+          <input type="number" (ngModel)="mapWidthDesired" id="mapWidthDesired" (change)="calculateDistanceMeasurment()">
+          <small>Width of Map in Desired Units of Measure</small>
+        </div>
+
+        <div class="input-group">
+          <input type="number" min="1" max="10" step="1" (ngModel)="maxZoom" id="maxZoom" (change)="calculateDistanceMeasurment()">
+          <small>Maximal Zoom</small>
+        </div>
+        <p id="notes">
+
+          Note that the unit of unit of measurement doesn't matter; just input the value. Also note that you don't need to input the full width. For example, if you know that you want 100px to equal 5 of your unit, use those values instead.
+
+        <p>
+
+      </div>
+
+    </div>
+
+
+    <div id="containerFinal" class="container">
+
+      <h1>Distance Measurement:</h1>
+      <h2 id="output">{{distanceMeasurement}}</h2>
+      <br><br>
+      <div id="copyButton">
+        <button (click)="copyResult()">Copy Result</button>
+      </div>
+    </div>    
+
+    <div id="ContainerFooter">
+
+      <p id="footer" class="footer">
+
+        Version 1.1.0 | Calculator by Brandon Echols and The Quacken | Submit Bugs & Ideas <a href="https://github.com/BrandonEchols04/kanka-ruler-calculation/issues" target="_blank">HERE</a>
+
+      <p>
+
+    </div>
+
+  </main>
+  <script src="script.js" defer></script>
