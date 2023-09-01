@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ruler-calculator.component.css']
 })
 export class RulerCalculatorComponent {
-  
+  title = "Kanka Ruler Calculator";
   constructor() {}
 
   ngOnInit(): void {
