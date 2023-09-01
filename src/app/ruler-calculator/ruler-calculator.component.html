@@ -6,17 +6,17 @@
       <br>
       <div class="parent">
         <div class="input-group">
-          <input type="number" (ngModel)="mapWidthPixels" id="mapWidthPixels" (change)="calculateDistanceMeasurment()">
+          <input type="number" [(ngModel)]="mapWidthPixels" id="mapWidthPixels" (change)="calculateDistanceMeasurment()">
           <small>Width of Map (pixels)</small>
         </div>
 
         <div class="input-group">
-          <input type="number" (ngModel)="mapWidthDesired" id="mapWidthDesired" (change)="calculateDistanceMeasurment()">
+          <input type="number" [(ngModel)]="mapWidthDesired" id="mapWidthDesired" (change)="calculateDistanceMeasurment()">
           <small>Width of Map in Desired Units of Measure</small>
         </div>
 
         <div class="input-group">
-          <input type="number" min="1" max="10" step="1" (ngModel)="maxZoom" id="maxZoom" (change)="calculateDistanceMeasurment()">
+          <input type="number" min="1" max="10" step="1" [(ngModel)]="maxZoom" id="maxZoom" (change)="calculateDistanceMeasurment()">
           <small>Maximal Zoom</small>
         </div>
         <p id="notes">
@@ -33,7 +33,7 @@
     <div id="containerFinal" class="container">
 
       <h1>Distance Measurement:</h1>
-      <h2 id="output">{{distanceMeasurement}}</h2>
+      <h2 id="output">{{distanceMeasurement | number:'0.4'}}</h2>
       <br><br>
       <div id="copyButton">
         <button (click)="copyResult()">Copy Result</button>

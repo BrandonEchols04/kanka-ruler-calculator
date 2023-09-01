@@ -29,8 +29,12 @@ export class RulerCalculatorComponent {
     this.distanceMeasurement = (this.mapWidthDesired * this.maxZoom) / (this.mapWidthPixels * Math.pow(2, this.maxZoom));
   }
 
-
   copyResult(){
     navigator.clipboard.writeText(this.distanceMeasurement.toString());
+    console.log("Distance Measurement Copied To Clipboard");
+    console.log("mapWidthPixels: "+this.mapWidthPixels)
+    console.log("mapWidthDesired: "+this.mapWidthDesired)
+    console.log("maxZoom: "+this.maxZoom)
+    console.log("distanceMeasurment: "+this.distanceMeasurement)
   }
 }
