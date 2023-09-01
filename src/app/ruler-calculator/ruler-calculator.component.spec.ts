@@ -33,7 +33,7 @@ describe('RulerCalculatorComponent', () => {
     expect(actual).toContain('Kanka Ruler Calculator');
   });
 
-  describe('should calculate the ', () => {
+  describe('should calculate the Distance Measurement to 4 decimal places', () => {
     it('should return 0.0456 when given 1700px, 155 units, and Max Zoom 1', () => {
       //arrange
       component.mapWidthPixels = 1700;
